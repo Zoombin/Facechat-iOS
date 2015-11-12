@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Header.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,15 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	// Override point for customization after application launch.
+	[[FCHTTPManager shared] fetchData:@"navigationbar" withBlock:^(id responseObject, NSError *error) {
+		NSLog(@"navigationbar: %@", responseObject);
+	}];
+	
+	[[FCHTTPManager shared] fetchData:@"tabbar/items" withBlock:^(id responseObject, NSError *error) {
+		NSLog(@"tabbar items: %@", responseObject);
+	}];
+
 	return YES;
 }
 
