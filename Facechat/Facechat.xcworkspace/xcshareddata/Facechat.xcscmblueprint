@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "88BE305F5CB6D110E0112122B148F24016632ABF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "88BE305F5CB6D110E0112122B148F24016632ABF" : 0,
+    "945BDD44B5084AB766F22C1C692F909BBE951964" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BC67EE69-B3E6-484C-A609-B0132ABB29AB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "88BE305F5CB6D110E0112122B148F24016632ABF" : "Facechat-iOS\/",
+    "945BDD44B5084AB766F22C1C692F909BBE951964" : "Facechat-iOS\/Facechat\/Submodules\/ZBUtilities\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Facechat",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Facechat\/Facechat.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zoombin\/Facechat-iOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "88BE305F5CB6D110E0112122B148F24016632ABF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/qq30135878\/ZBUtilities.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "945BDD44B5084AB766F22C1C692F909BBE951964"
+    }
+  ]
+}

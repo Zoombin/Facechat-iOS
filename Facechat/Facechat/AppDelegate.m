@@ -16,7 +16,7 @@
 @implementation AppDelegate
 
 - (UINavigationController *)rootNavigationControllerWithTabBarModel:(OKTabBarItemModel *)model {
-	UIViewController *viewController = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+	FCViewController *viewController = [[FCViewController alloc] initWithNibName:nil bundle:nil];
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
 	viewController.title = model.title;
 	navigationController.tabBarItem.title = model.name;
@@ -26,8 +26,8 @@
 	requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
 	[requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
 		navigationController.tabBarItem.image = [responseObject imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-		//UIColor *color = [UIColor hexRGB:[model.nameColor hexUInteger]];
-		//[navigationController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : color} forState:UIControlStateNormal];
+		UIColor *color = [UIColor hexRGB:[model.nameColor hexUInteger]];
+		[navigationController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : color} forState:UIControlStateNormal];
 	} failure:nil];
 	[requestOperation start];
 	
@@ -36,8 +36,8 @@
 	requestOperation2.responseSerializer = [AFImageResponseSerializer serializer];
 	[requestOperation2 setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
 		navigationController.tabBarItem.selectedImage = [responseObject imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-		//UIColor *color = [UIColor hexRGB:[model.nameColorSelected hexUInteger]];
-		//[navigationController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : color} forState:UIControlStateSelected];
+		UIColor *color = [UIColor hexRGB:[model.nameColorSelected hexUInteger]];
+		[navigationController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : color} forState:UIControlStateSelected];
 	} failure:nil];
 	[requestOperation2 start];
 	

@@ -9,9 +9,18 @@
 #ifndef Header_h
 #define Header_h
 
-#import "FCHTTPManager.h"
+//OKApp
 #import "OKModel.h"
 #import "OKTabBarItemModel.h"
 #import "OKNavigationBarModel.h"
+
+//ZBUtilities
+#import "NSString+Hex.h"
+#import "UIColor+Hex.h"
+
+//FC
+#import "FCHTTPManager.h"
+#import "FCViewController.h"
+
 
 #endif /* Header_h */
