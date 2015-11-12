@@ -1,0 +1,3 @@
+[submodule "Facechat/Submodules/AFNetworking"]
+	path = Facechat/Submodules/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking
