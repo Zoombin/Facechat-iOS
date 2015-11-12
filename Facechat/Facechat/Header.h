@@ -10,5 +10,8 @@
 #define Header_h
 
 #import "FCHTTPManager.h"
+#import "OKModel.h"
+#import "OKTabBarItemModel.h"
+#import "OKNavigationBarModel.h"
 
 #endif /* Header_h */

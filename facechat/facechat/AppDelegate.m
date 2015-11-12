@@ -15,13 +15,70 @@
 
 @implementation AppDelegate
 
+- (UINavigationController *)rootNavigationControllerWithTabBarModel:(OKTabBarItemModel *)model {
+	UIViewController *viewController = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+	viewController.title = model.title;
+	navigationController.tabBarItem.title = model.name;
+	
+	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:model.image]];
+	AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+	requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
+	[requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+		navigationController.tabBarItem.image = [responseObject imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+		//UIColor *color = [UIColor hexRGB:[model.nameColor hexUInteger]];
+		//[navigationController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : color} forState:UIControlStateNormal];
+	} failure:nil];
+	[requestOperation start];
+	
+	NSURLRequest *request2 = [NSURLRequest requestWithURL:[NSURL URLWithString:model.imageSelected]];
+	AFHTTPRequestOperation *requestOperation2 = [[AFHTTPRequestOperation alloc] initWithRequest:request2];
+	requestOperation2.responseSerializer = [AFImageResponseSerializer serializer];
+	[requestOperation2 setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+		navigationController.tabBarItem.selectedImage = [responseObject imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+		//UIColor *color = [UIColor hexRGB:[model.nameColorSelected hexUInteger]];
+		//[navigationController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : color} forState:UIControlStateSelected];
+	} failure:nil];
+	[requestOperation2 start];
+	
+	return navigationController;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	[[FCHTTPManager shared] fetchData:@"navigationbar" withBlock:^(id responseObject, NSError *error) {
-		NSLog(@"navigationbar: %@", responseObject);
+		if (!error) {
+			OKModel *baseModel = [[OKModel alloc] initWithDictionary:responseObject error:nil];
+			if (baseModel.exception.boolValue) {
+				NSLog(@"navigationbar message: %@", baseModel.msg);
+			} else {
+				OKNavigationBarModel *navigationBarModel = [[OKNavigationBarModel alloc] initWithDictionary:baseModel.data[0] error:nil];
+				[navigationBarModel archive];
+			}
+		}
 	}];
 	
 	[[FCHTTPManager shared] fetchData:@"tabbar/items" withBlock:^(id responseObject, NSError *error) {
-		NSLog(@"tabbar items: %@", responseObject);
+		if (!error) {
+			OKModel *baseModel = [[OKModel alloc] initWithDictionary:responseObject error:nil];
+			if (baseModel.exception.boolValue) {
+				NSLog(@"tabbar message: %@", baseModel.msg);
+			} else {
+				NSArray *array = baseModel.data;
+				
+				NSMutableArray *controllers = [NSMutableArray array];
+				[array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+					OKTabBarItemModel *tabBarItemModel = [[OKTabBarItemModel alloc] initWithDictionary:obj error:nil];
+					[controllers addObject:[self rootNavigationControllerWithTabBarModel:tabBarItemModel]];
+				}];
+				
+				UITabBarController *tabBarController = [[UITabBarController alloc] initWithNibName:nil bundle:nil];
+				tabBarController.viewControllers = controllers;
+				
+				self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+				self.window.rootViewController = tabBarController;
+				[self.window makeKeyAndVisible];
+			}
+		}
 	}];
 
 	return YES;
