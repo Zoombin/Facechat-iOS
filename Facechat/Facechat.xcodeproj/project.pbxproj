@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2860C4F663BA51E459B767ED /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C11A0BD83243705DA94AE0 /* libPods.a */; };
+		7792EFD91BF45FE700450705 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7792EFD81BF45FE700450705 /* main.m */; };
+		7792EFDC1BF45FE700450705 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7792EFDB1BF45FE700450705 /* AppDelegate.m */; };
+		7792EFE71BF45FE700450705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7792EFE61BF45FE700450705 /* Assets.xcassets */; };
+		7792EFEA1BF45FE700450705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7792EFE81BF45FE700450705 /* LaunchScreen.storyboard */; };
+		7792EFF51BF45FE700450705 /* FacechatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7792EFF41BF45FE700450705 /* FacechatTests.m */; };
+		7792F0001BF45FE700450705 /* FacechatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7792EFFF1BF45FE700450705 /* FacechatUITests.m */; };
+		7792F00F1BF4603900450705 /* FCHTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7792F00E1BF4603900450705 /* FCHTTPManager.m */; };
+		7792F0191BF4607A00450705 /* OKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7792F0141BF4607A00450705 /* OKModel.m */; };
+		7792F01A1BF4607A00450705 /* OKNavigationBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7792F0161BF4607A00450705 /* OKNavigationBarModel.m */; };
+		7792F01B1BF4607A00450705 /* OKTabBarItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7792F0181BF4607A00450705 /* OKTabBarItemModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7792EFF11BF45FE700450705 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7792EFCC1BF45FE700450705 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7792EFD31BF45FE700450705;
+			remoteInfo = Facechat;
+		};
+		7792EFFC1BF45FE700450705 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7792EFCC1BF45FE700450705 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7792EFD31BF45FE700450705;
+			remoteInfo = Facechat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		31C11A0BD83243705DA94AE0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		32AB69C96C06C64F54D73B50 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3704FA7FF4B4CBEACFB8209C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7792EFD41BF45FE700450705 /* Facechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7792EFD81BF45FE700450705 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7792EFDA1BF45FE700450705 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7792EFDB1BF45FE700450705 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7792EFE61BF45FE700450705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7792EFE91BF45FE700450705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7792EFEB1BF45FE700450705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7792EFF01BF45FE700450705 /* FacechatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacechatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7792EFF41BF45FE700450705 /* FacechatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacechatTests.m; sourceTree = "<group>"; };
+		7792EFF61BF45FE700450705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7792EFFB1BF45FE700450705 /* FacechatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacechatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7792EFFF1BF45FE700450705 /* FacechatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacechatUITests.m; sourceTree = "<group>"; };
+		7792F0011BF45FE700450705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7792F00D1BF4603900450705 /* FCHTTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCHTTPManager.h; sourceTree = "<group>"; };
+		7792F00E1BF4603900450705 /* FCHTTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCHTTPManager.m; sourceTree = "<group>"; };
+		7792F0111BF4605F00450705 /* FCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCHeader.h; sourceTree = "<group>"; };
+		7792F0131BF4607A00450705 /* OKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKModel.h; sourceTree = "<group>"; };
+		7792F0141BF4607A00450705 /* OKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKModel.m; sourceTree = "<group>"; };
+		7792F0151BF4607A00450705 /* OKNavigationBarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKNavigationBarModel.h; sourceTree = "<group>"; };
+		7792F0161BF4607A00450705 /* OKNavigationBarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKNavigationBarModel.m; sourceTree = "<group>"; };
+		7792F0171BF4607A00450705 /* OKTabBarItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKTabBarItemModel.h; sourceTree = "<group>"; };
+		7792F0181BF4607A00450705 /* OKTabBarItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKTabBarItemModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7792EFD11BF45FE700450705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2860C4F663BA51E459B767ED /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7792EFED1BF45FE700450705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7792EFF81BF45FE700450705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7792EFCB1BF45FE700450705 = {
+			isa = PBXGroup;
+			children = (
+				7792F0121BF4607A00450705 /* OKApp */,
+				7792EFD61BF45FE700450705 /* Facechat */,
+				7792EFF31BF45FE700450705 /* FacechatTests */,
+				7792EFFE1BF45FE700450705 /* FacechatUITests */,
+				7792EFD51BF45FE700450705 /* Products */,
+				DF63809FD84457AB9F9CB66A /* Pods */,
+				7B082866F2305A5D9B192879 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7792EFD51BF45FE700450705 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7792EFD41BF45FE700450705 /* Facechat.app */,
+				7792EFF01BF45FE700450705 /* FacechatTests.xctest */,
+				7792EFFB1BF45FE700450705 /* FacechatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7792EFD61BF45FE700450705 /* Facechat */ = {
+			isa = PBXGroup;
+			children = (
+				7792F0111BF4605F00450705 /* FCHeader.h */,
+				7792F00D1BF4603900450705 /* FCHTTPManager.h */,
+				7792F00E1BF4603900450705 /* FCHTTPManager.m */,
+				7792EFDA1BF45FE700450705 /* AppDelegate.h */,
+				7792EFDB1BF45FE700450705 /* AppDelegate.m */,
+				7792EFE61BF45FE700450705 /* Assets.xcassets */,
+				7792EFE81BF45FE700450705 /* LaunchScreen.storyboard */,
+				7792EFEB1BF45FE700450705 /* Info.plist */,
+				7792EFD71BF45FE700450705 /* Supporting Files */,
+			);
+			path = Facechat;
+			sourceTree = "<group>";
+		};
+		7792EFD71BF45FE700450705 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7792EFD81BF45FE700450705 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7792EFF31BF45FE700450705 /* FacechatTests */ = {
+			isa = PBXGroup;
+			children = (
+				7792EFF41BF45FE700450705 /* FacechatTests.m */,
+				7792EFF61BF45FE700450705 /* Info.plist */,
+			);
+			path = FacechatTests;
+			sourceTree = "<group>";
+		};
+		7792EFFE1BF45FE700450705 /* FacechatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7792EFFF1BF45FE700450705 /* FacechatUITests.m */,
+				7792F0011BF45FE700450705 /* Info.plist */,
+			);
+			path = FacechatUITests;
+			sourceTree = "<group>";
+		};
+		7792F0121BF4607A00450705 /* OKApp */ = {
+			isa = PBXGroup;
+			children = (
+				7792F0131BF4607A00450705 /* OKModel.h */,
+				7792F0141BF4607A00450705 /* OKModel.m */,
+				7792F0151BF4607A00450705 /* OKNavigationBarModel.h */,
+				7792F0161BF4607A00450705 /* OKNavigationBarModel.m */,
+				7792F0171BF4607A00450705 /* OKTabBarItemModel.h */,
+				7792F0181BF4607A00450705 /* OKTabBarItemModel.m */,
+			);
+			path = OKApp;
+			sourceTree = "<group>";
+		};
+		7B082866F2305A5D9B192879 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31C11A0BD83243705DA94AE0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF63809FD84457AB9F9CB66A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3704FA7FF4B4CBEACFB8209C /* Pods.debug.xcconfig */,
+				32AB69C96C06C64F54D73B50 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7792EFD31BF45FE700450705 /* Facechat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7792F0041BF45FE700450705 /* Build configuration list for PBXNativeTarget "Facechat" */;
+			buildPhases = (
+				A350FC5DA2C3CE64C774E2E6 /* Check Pods Manifest.lock */,
+				7792EFD01BF45FE700450705 /* Sources */,
+				7792EFD11BF45FE700450705 /* Frameworks */,
+				7792EFD21BF45FE700450705 /* Resources */,
+				C3A49E761E8198462776C410 /* Embed Pods Frameworks */,
+				3CA6CA761D31FFE61FA28266 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Facechat;
+			productName = Facechat;
+			productReference = 7792EFD41BF45FE700450705 /* Facechat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7792EFEF1BF45FE700450705 /* FacechatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7792F0071BF45FE700450705 /* Build configuration list for PBXNativeTarget "FacechatTests" */;
+			buildPhases = (
+				7792EFEC1BF45FE700450705 /* Sources */,
+				7792EFED1BF45FE700450705 /* Frameworks */,
+				7792EFEE1BF45FE700450705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7792EFF21BF45FE700450705 /* PBXTargetDependency */,
+			);
+			name = FacechatTests;
+			productName = FacechatTests;
+			productReference = 7792EFF01BF45FE700450705 /* FacechatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7792EFFA1BF45FE700450705 /* FacechatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7792F00A1BF45FE700450705 /* Build configuration list for PBXNativeTarget "FacechatUITests" */;
+			buildPhases = (
+				7792EFF71BF45FE700450705 /* Sources */,
+				7792EFF81BF45FE700450705 /* Frameworks */,
+				7792EFF91BF45FE700450705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7792EFFD1BF45FE700450705 /* PBXTargetDependency */,
+			);
+			name = FacechatUITests;
+			productName = FacechatUITests;
+			productReference = 7792EFFB1BF45FE700450705 /* FacechatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7792EFCC1BF45FE700450705 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = zoombin;
+				TargetAttributes = {
+					7792EFD31BF45FE700450705 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					7792EFEF1BF45FE700450705 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 7792EFD31BF45FE700450705;
+					};
+					7792EFFA1BF45FE700450705 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 7792EFD31BF45FE700450705;
+					};
+				};
+			};
+			buildConfigurationList = 7792EFCF1BF45FE700450705 /* Build configuration list for PBXProject "Facechat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7792EFCB1BF45FE700450705;
+			productRefGroup = 7792EFD51BF45FE700450705 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7792EFD31BF45FE700450705 /* Facechat */,
+				7792EFEF1BF45FE700450705 /* FacechatTests */,
+				7792EFFA1BF45FE700450705 /* FacechatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7792EFD21BF45FE700450705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7792EFEA1BF45FE700450705 /* LaunchScreen.storyboard in Resources */,
+				7792EFE71BF45FE700450705 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7792EFEE1BF45FE700450705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7792EFF91BF45FE700450705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CA6CA761D31FFE61FA28266 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A350FC5DA2C3CE64C774E2E6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C3A49E761E8198462776C410 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7792EFD01BF45FE700450705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7792EFDC1BF45FE700450705 /* AppDelegate.m in Sources */,
+				7792F01A1BF4607A00450705 /* OKNavigationBarModel.m in Sources */,
+				7792F01B1BF4607A00450705 /* OKTabBarItemModel.m in Sources */,
+				7792F00F1BF4603900450705 /* FCHTTPManager.m in Sources */,
+				7792EFD91BF45FE700450705 /* main.m in Sources */,
+				7792F0191BF4607A00450705 /* OKModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7792EFEC1BF45FE700450705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7792EFF51BF45FE700450705 /* FacechatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7792EFF71BF45FE700450705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7792F0001BF45FE700450705 /* FacechatUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7792EFF21BF45FE700450705 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7792EFD31BF45FE700450705 /* Facechat */;
+			targetProxy = 7792EFF11BF45FE700450705 /* PBXContainerItemProxy */;
+		};
+		7792EFFD1BF45FE700450705 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7792EFD31BF45FE700450705 /* Facechat */;
+			targetProxy = 7792EFFC1BF45FE700450705 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7792EFE81BF45FE700450705 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7792EFE91BF45FE700450705 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7792F0021BF45FE700450705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7792F0031BF45FE700450705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7792F0051BF45FE700450705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3704FA7FF4B4CBEACFB8209C /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Facechat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoombin.Facechat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7792F0061BF45FE700450705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32AB69C96C06C64F54D73B50 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Facechat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoombin.Facechat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7792F0081BF45FE700450705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FacechatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoombin.FacechatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Facechat.app/Facechat";
+			};
+			name = Debug;
+		};
+		7792F0091BF45FE700450705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FacechatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoombin.FacechatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Facechat.app/Facechat";
+			};
+			name = Release;
+		};
+		7792F00B1BF45FE700450705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FacechatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoombin.FacechatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Facechat;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		7792F00C1BF45FE700450705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FacechatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoombin.FacechatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Facechat;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7792EFCF1BF45FE700450705 /* Build configuration list for PBXProject "Facechat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7792F0021BF45FE700450705 /* Debug */,
+				7792F0031BF45FE700450705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7792F0041BF45FE700450705 /* Build configuration list for PBXNativeTarget "Facechat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7792F0051BF45FE700450705 /* Debug */,
+				7792F0061BF45FE700450705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7792F0071BF45FE700450705 /* Build configuration list for PBXNativeTarget "FacechatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7792F0081BF45FE700450705 /* Debug */,
+				7792F0091BF45FE700450705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7792F00A1BF45FE700450705 /* Build configuration list for PBXNativeTarget "FacechatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7792F00B1BF45FE700450705 /* Debug */,
+				7792F00C1BF45FE700450705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7792EFCC1BF45FE700450705 /* Project object */;
+}
