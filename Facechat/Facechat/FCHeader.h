@@ -18,11 +18,16 @@
 #import "NSString+Hex.h"
 #import "UIColor+Hex.h"
 
+//UMeng
+#import "UMSocial.h"
+#import "UMSocialWechatHandler.h"
+
 //FC
 #import "FCHTTPManager.h"
 #import "FCViewController.h"
 
 //constants
 extern NSString * const BASE_URL_STRING;
+extern NSString * const UMENG_APPKEY;
 
 #endif /* Header_h */

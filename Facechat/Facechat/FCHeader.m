@@ -10,3 +10,4 @@
 #import "FCHeader.h"
 
 NSString * const BASE_URL_STRING = @"http://localhost:3000/";
+NSString * const UMENG_APPKEY = @"54a8a3d1fd98c583b80005c7";
