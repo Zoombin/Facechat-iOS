@@ -7,8 +7,7 @@
 //
 
 #import "FCHTTPManager.h"
-
-NSString * const BASE_URL_STRING = @"http://localhost:3000/";
+#import "FCHeader.h"
 
 @implementation FCHTTPManager
 

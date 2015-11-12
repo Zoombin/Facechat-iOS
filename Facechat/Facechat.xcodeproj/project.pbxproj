@@ -48,6 +48,7 @@
 		7792F06F1BF4622D00450705 /* ZBUtilities.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7792F0511BF4622D00450705 /* ZBUtilities.podspec */; };
 		7792F0701BF4622D00450705 /* ZBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7792F0531BF4622D00450705 /* ZBViewController.m */; };
 		7792F0731BF462C000450705 /* FCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7792F0721BF462C000450705 /* FCViewController.m */; };
+		7792F0751BF4653100450705 /* FCHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7792F0741BF4653100450705 /* FCHeader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,7 @@
 		7792F0531BF4622D00450705 /* ZBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBViewController.m; sourceTree = "<group>"; };
 		7792F0711BF462C000450705 /* FCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCViewController.h; sourceTree = "<group>"; };
 		7792F0721BF462C000450705 /* FCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCViewController.m; sourceTree = "<group>"; };
+		7792F0741BF4653100450705 /* FCHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCHeader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				7792F0111BF4605F00450705 /* FCHeader.h */,
+				7792F0741BF4653100450705 /* FCHeader.m */,
 				7792F00D1BF4603900450705 /* FCHTTPManager.h */,
 				7792F00E1BF4603900450705 /* FCHTTPManager.m */,
 				7792EFDA1BF45FE700450705 /* AppDelegate.h */,
@@ -546,6 +549,7 @@
 				7792F0601BF4622D00450705 /* UICollectionViewCell+ZBUtilites.m in Sources */,
 				7792EFD91BF45FE700450705 /* main.m in Sources */,
 				7792F0641BF4622D00450705 /* UIImage+LogN.m in Sources */,
+				7792F0751BF4653100450705 /* FCHeader.m in Sources */,
 				7792F0681BF4622D00450705 /* UIViewController+ImagePicker.m in Sources */,
 				7792F0691BF4622D00450705 /* UIViewController+ZBUtilites.m in Sources */,
 				7792F06E1BF4622D00450705 /* ZBTextValidate.m in Sources */,

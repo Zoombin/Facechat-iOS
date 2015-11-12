@@ -19,6 +19,7 @@
 	FCViewController *viewController = [[FCViewController alloc] initWithNibName:nil bundle:nil];
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
 	viewController.title = model.title;
+	viewController.href = model.href;
 	navigationController.tabBarItem.title = model.name;
 	
 	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:model.image]];

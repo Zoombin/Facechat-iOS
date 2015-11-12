@@ -9,6 +9,10 @@
 #import "FCViewController.h"
 #import "FCHeader.h"
 
+@interface FCViewController ()
+
+@end
+
 @implementation FCViewController
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -21,6 +25,13 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	self.view.backgroundColor = [UIColor whiteColor];
+	
+	UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+	webView.backgroundColor = self.view.backgroundColor;
+	NSString *URLString = [NSString stringWithFormat:@"%@%@", BASE_URL_STRING, _href];
+	
+	[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:URLString]]];
+	[self.view addSubview:webView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -22,5 +22,7 @@
 #import "FCHTTPManager.h"
 #import "FCViewController.h"
 
+//constants
+extern NSString * const BASE_URL_STRING;
 
 #endif /* Header_h */

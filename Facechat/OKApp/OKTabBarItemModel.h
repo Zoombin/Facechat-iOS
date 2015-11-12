@@ -11,6 +11,7 @@
 
 @interface OKTabBarItemModel : OKModel
 
+@property (nonatomic, strong) NSString *href;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *nameColor;

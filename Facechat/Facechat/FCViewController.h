@@ -10,4 +10,6 @@
 
 @interface FCViewController : UIViewController
 
+@property (nonatomic, strong) NSString *href;
+
 @end
