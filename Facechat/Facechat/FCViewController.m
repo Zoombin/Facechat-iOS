@@ -10,7 +10,7 @@
 #import "FCHeader.h"
 #import "WebViewJavascriptBridge.h"
 
-@interface FCViewController () <UMSocialUIDelegate>
+@interface FCViewController () <UMSocialUIDelegate, WXApiDelegate>
 
 @property UIWebView *webView;
 @property WebViewJavascriptBridge *bridge;
@@ -22,7 +22,6 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (self) {
-		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"分享" style:UIBarButtonItemStyleDone target:self action:@selector(share)];
 	}
 	return self;
 }
@@ -41,14 +40,9 @@
 		responseCallback(@"Right back atcha");
 	}];
 	
-	[self.bridge registerHandler:@"umshare" handler:^(id data, WVJBResponseCallback responseCallback) {
+	[self.bridge registerHandler:@"shareToWeChat" handler:^(id data, WVJBResponseCallback responseCallback) {
 		if (data) {
-			NSLog(@"umshare data: %@", data);
-			responseCallback(@"Right back 123");
-//			self.shareInfo = [[ZMShareInfo alloc] initWithString:data error:nil];
-//			if (_zmdelegate) {
-//				[_zmdelegate setUpShareInfo:self.shareInfo];
-//			}
+			[self shareToWeChat:data];
 		}
 	}];
 }
@@ -72,15 +66,39 @@
 	[super didReceiveMemoryWarning];
 }
 
-- (void)share {
-	NSLog(@"share");
+- (void)shareToWeChat:(id)data {
+	NSError *error = nil;
+	FCSocialShareModel *model = [[FCSocialShareModel alloc] initWithDictionary: data error:&error];
+	if (error) {
+		NSLog(@"shareToWeChat error: %@", error);
+		return;
+	}
 	
-	[UMSocialSnsService presentSnsIconSheetView:self
-										 appKey:UMENG_APPKEY
-									  shareText:@"你要分享的文字"
-									 shareImage:[UIImage imageNamed:@"Test"]
-								shareToSnsNames:[NSArray arrayWithObjects:UMShareToWechatSession, UMShareToWechatTimeline, nil]
-									   delegate:self];
+	enum WXScene scene = WXSceneSession;
+	if ([model.scene isEqualToString:@"WXSceneTimeline"]) {
+		scene = WXSceneTimeline;
+	} else if ([model.scene isEqualToString:@"WXSceneFavorite"]) {
+		scene = WXSceneFavorite;
+	}
+	
+	if (!model.url.length) {
+		return;
+	}
+	
+	NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:model.url]];
+	UIImage *image = [UIImage imageWithData:imageData];
+	WXEmoticonObject *ext = [WXEmoticonObject object];
+	ext.emoticonData = imageData;
+	
+	WXMediaMessage *message = [WXMediaMessage message];
+	[message setThumbImage:image];
+	message.mediaObject = ext;
+	
+	SendMessageToWXReq *req = [[SendMessageToWXReq alloc] init];
+	req.bText = NO;
+	req.message = message;
+	req.scene = scene;
+	[WXApi sendReq:req];
 }
 
 @end

@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "FCHeader.h"
 
-NSString * const BASE_URL_STRING = @"http://localhost:3000/";
+//NSString * const BASE_URL_STRING = @"http://localhost:3000/";
+NSString * const BASE_URL_STRING = @"http://facechat.meteor.com/";
 NSString * const UMENG_APPKEY = @"54a8a3d1fd98c583b80005c7";
+	

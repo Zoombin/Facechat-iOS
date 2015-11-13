@@ -22,9 +22,13 @@
 #import "UMSocial.h"
 #import "UMSocialWechatHandler.h"
 
+//Wechat
+#import "WXApi.h"
+
 //FC
 #import "FCHTTPManager.h"
 #import "FCViewController.h"
+#import "FCSocialShareModel.h"
 
 //constants
 extern NSString * const BASE_URL_STRING;

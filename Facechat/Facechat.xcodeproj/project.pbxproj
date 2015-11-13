@@ -80,6 +80,7 @@
 		7792F0C61BF46BFB00450705 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7792F0C51BF46BFB00450705 /* libsqlite3.tbd */; };
 		7792F0C81BF46C0200450705 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7792F0C71BF46C0200450705 /* libz.tbd */; };
 		7792F0CA1BF46C0700450705 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7792F0C91BF46C0700450705 /* libxml2.tbd */; };
+		77963F4D1BF5BDE8006B684D /* FCSocialShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 77963F4C1BF5BDE8006B684D /* FCSocialShareModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -228,6 +229,8 @@
 		7792F0C51BF46BFB00450705 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7792F0C71BF46C0200450705 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		7792F0C91BF46C0700450705 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		77963F4B1BF5BDE8006B684D /* FCSocialShareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCSocialShareModel.h; sourceTree = "<group>"; };
+		77963F4C1BF5BDE8006B684D /* FCSocialShareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCSocialShareModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +304,8 @@
 				7792EFDB1BF45FE700450705 /* AppDelegate.m */,
 				7792F0711BF462C000450705 /* FCViewController.h */,
 				7792F0721BF462C000450705 /* FCViewController.m */,
+				77963F4B1BF5BDE8006B684D /* FCSocialShareModel.h */,
+				77963F4C1BF5BDE8006B684D /* FCSocialShareModel.m */,
 				7792EFE61BF45FE700450705 /* Assets.xcassets */,
 				7792EFE81BF45FE700450705 /* LaunchScreen.storyboard */,
 				7792EFEB1BF45FE700450705 /* Info.plist */,
@@ -771,6 +776,7 @@
 				7792F06B1BF4622D00450705 /* ZBFiveStarsRateView.m in Sources */,
 				7792F0611BF4622D00450705 /* UIColor+Hex.m in Sources */,
 				7792F05E1BF4622D00450705 /* README.md in Sources */,
+				77963F4D1BF5BDE8006B684D /* FCSocialShareModel.m in Sources */,
 				7792F0191BF4607A00450705 /* OKModel.m in Sources */,
 				7792F05F1BF4622D00450705 /* UIActionSheet+ZBUtilities.m in Sources */,
 				7792F05B1BF4622D00450705 /* NSString+BundleExtensions.m in Sources */,

@@ -16,8 +16,9 @@
 @implementation AppDelegate
 
 - (UINavigationController *)rootNavigationControllerWithTabBarModel:(OKTabBarItemModel *)model {
-	[UMSocialData setAppKey:UMENG_APPKEY];
-	[UMSocialWechatHandler setWXAppId:@"wx42e82edbe4bcc118" appSecret:@"fe5e2430494ccbb052fb13b4fa226aa5" url:@"http://www.umeng.com/social"];
+	[WXApi registerApp:@"wx42e82edbe4bcc118" withDescription:@"facechat"];
+//	[UMSocialData setAppKey:UMENG_APPKEY];
+//	[UMSocialWechatHandler setWXAppId:@"wx42e82edbe4bcc118" appSecret:@"fe5e2430494ccbb052fb13b4fa226aa5" url:@"http://www.umeng.com/social"];
 
 	
 	FCViewController *viewController = [[FCViewController alloc] initWithNibName:nil bundle:nil];
