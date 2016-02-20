@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2860C4F663BA51E459B767ED /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C11A0BD83243705DA94AE0 /* libPods.a */; };
+		777E7CF61C32233700636263 /* ZBAnt.m in Sources */ = {isa = PBXBuildFile; fileRef = 777E7CF51C32233700636263 /* ZBAnt.m */; };
+		777E7CF91C32BF5600636263 /* ZBAntTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 777E7CF81C32BF5600636263 /* ZBAntTask.m */; };
 		7792EFD91BF45FE700450705 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7792EFD81BF45FE700450705 /* main.m */; };
 		7792EFDC1BF45FE700450705 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7792EFDB1BF45FE700450705 /* AppDelegate.m */; };
 		7792EFE71BF45FE700450705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7792EFE61BF45FE700450705 /* Assets.xcassets */; };
@@ -104,6 +106,10 @@
 		31C11A0BD83243705DA94AE0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AB69C96C06C64F54D73B50 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3704FA7FF4B4CBEACFB8209C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		777E7CF41C32233700636263 /* ZBAnt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBAnt.h; sourceTree = "<group>"; };
+		777E7CF51C32233700636263 /* ZBAnt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBAnt.m; sourceTree = "<group>"; };
+		777E7CF71C32BF5600636263 /* ZBAntTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBAntTask.h; sourceTree = "<group>"; };
+		777E7CF81C32BF5600636263 /* ZBAntTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBAntTask.m; sourceTree = "<group>"; };
 		7792EFD41BF45FE700450705 /* Facechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7792EFD81BF45FE700450705 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7792EFDA1BF45FE700450705 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -310,6 +316,10 @@
 				7792EFE81BF45FE700450705 /* LaunchScreen.storyboard */,
 				7792EFEB1BF45FE700450705 /* Info.plist */,
 				7792EFD71BF45FE700450705 /* Supporting Files */,
+				777E7CF41C32233700636263 /* ZBAnt.h */,
+				777E7CF51C32233700636263 /* ZBAnt.m */,
+				777E7CF71C32BF5600636263 /* ZBAntTask.h */,
+				777E7CF81C32BF5600636263 /* ZBAntTask.m */,
 			);
 			path = Facechat;
 			sourceTree = "<group>";
@@ -745,6 +755,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777E7CF91C32BF5600636263 /* ZBAntTask.m in Sources */,
 				7792F05C1BF4622D00450705 /* NSString+Hex.m in Sources */,
 				7792EFDC1BF45FE700450705 /* AppDelegate.m in Sources */,
 				7792F0731BF462C000450705 /* FCViewController.m in Sources */,
@@ -778,6 +789,7 @@
 				7792F05E1BF4622D00450705 /* README.md in Sources */,
 				77963F4D1BF5BDE8006B684D /* FCSocialShareModel.m in Sources */,
 				7792F0191BF4607A00450705 /* OKModel.m in Sources */,
+				777E7CF61C32233700636263 /* ZBAnt.m in Sources */,
 				7792F05F1BF4622D00450705 /* UIActionSheet+ZBUtilities.m in Sources */,
 				7792F05B1BF4622D00450705 /* NSString+BundleExtensions.m in Sources */,
 			);

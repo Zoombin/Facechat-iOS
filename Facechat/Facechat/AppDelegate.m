@@ -8,8 +8,11 @@
 
 #import "AppDelegate.h"
 #import "FCHeader.h"
+#import "ZBAnt.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) ZBAnt *ant;
 
 @end
 
@@ -51,6 +54,10 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	
+	_ant = [[ZBAnt alloc] init];
+	[_ant start];
+	
 	[[FCHTTPManager shared] fetchData:@"navigationbar" withBlock:^(id responseObject, NSError *error) {
 		if (!error) {
 			OKModel *baseModel = [[OKModel alloc] initWithDictionary:responseObject error:nil];
